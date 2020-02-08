@@ -16,7 +16,6 @@ function sendLeads(profile, listing){
     })
 }
 
-
 function parseListings(){
     var listing = [];
     var profile = {};

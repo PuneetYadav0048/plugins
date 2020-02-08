@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "www.yext.com listing",
+    "version": "1.0",
+    "description": "Background extension to fetch leads from www.labdraw.com (healthcare provider)",
+    "browser_action": {
+        "default_title": "[BirdEye]: www.yext.com ",
+        "default_icon": {
+            "19": "img/birdeye-icon-small.png",
+            "38": "img/birdeye-icon-small.png",
+            "128": "img/birdeye-icon.png"
+        }
+    },
+    "icons": {
+        "19": "img/birdeye-icon-small.png",
+        "38": "img/birdeye-icon-small.png",
+        "128": "img/birdeye-icon.png"
+    },
+    "content_scripts": [{
+        "matches": ["*://www.yext.com/*"],
+        "js": ["scripts/jquery.js", "scripts/content_script.js"]
+    }],
+    "permissions": [
+        "background",
+        "cookies",
+        "tabs",
+        "idle",
+        "storage",
+        "notifications",
+        "http://*/",
+        "https://*/"
+    ],
+    "web_accessible_resources": ["*"]
+}
